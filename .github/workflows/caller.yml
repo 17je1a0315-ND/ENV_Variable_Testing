@@ -9,6 +9,5 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/reuseable.yml
-
     with:
-      environment: Development
+      env_name: Development
