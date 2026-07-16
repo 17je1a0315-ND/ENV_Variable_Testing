@@ -2,18 +2,14 @@ name: Hello World Workflow
 
 on:
   workflow_call:
-    inputs:
-      env_name:
-        description: GitHub Environment Name
-        required: true
-        type: string
 
 jobs:
   hello-world:
     runs-on: ubuntu-latest
 
-    environment: ${{ inputs.env_name }}
+    environment: Development
 
     steps:
       - name: Print Names
-        run: echo "List: ${{ vars.PRINT }}"
+        run: |
+          echo "List: ${{ vars.PRINT }}"
