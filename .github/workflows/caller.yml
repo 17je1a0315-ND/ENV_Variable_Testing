@@ -7,7 +7,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+ build:
     uses: ./.github/workflows/reuseable.yml
-    with:
-      env_name: Development
