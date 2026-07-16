@@ -3,8 +3,8 @@ name: Hello World Workflow
 on:
   workflow_call:
     inputs:
-      environment:
-        description: "GitHub Environment Name"
+      env_name:
+        description: GitHub Environment Name
         required: true
         type: string
 
@@ -12,7 +12,7 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
 
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.env_name }}
 
     steps:
       - name: Print Names
